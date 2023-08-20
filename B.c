@@ -26,11 +26,11 @@ void callHeap(int n)
 
 void callGlobal()
 {
-    printf("Data Address: %p\n", &a);
-    printf("Data Address: %p\n", &b);
-    printf("Data Address: %p\n", &c);
-    printf("Data Address: %p\n", &d);
-    printf("Data Address: %p\n", &e);
+    printf("a Data Address: %p\n", &a);
+    printf("b Data Address: %p\n", &b);
+    printf("c Data Address: %p\n", &c);
+    printf("d Data Address: %p\n", &d);
+    printf("e Data Address: %p\n", &e);
 }
 
 void stackOverflow(int num)
