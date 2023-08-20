@@ -33,14 +33,23 @@ void callGlobal()
     printf("Data Address: %p\n", &e);
 }
 
+void stackOverflow(int num)
+{
+    int local;
+    printf("%d - Stack Address: %p\n", num, &local);
+    stackOverflow(num+1);
+}
+
 int main()
 {
-    int n = 5;
+    int n=5;
     printf("Stack grows downward:\n");
     callStack(n);
     printf("\nHeap grows upward:\n");
     callHeap(n);
     printf("\nGlobal variables:\n");
     callGlobal();
+    // use fucntion below to cause stack overflow
+    //stackOverflow(0);
     return 0;
 }
